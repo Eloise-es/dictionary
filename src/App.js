@@ -1,5 +1,6 @@
 import logo from "./logo.jpg";
 import "./App.css";
+import Dictionary from "./Dictionary";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           <img src={logo}></img>
         </header>
         <main>
+          <Dictionary />
         </main>
       </div>
     </div>
