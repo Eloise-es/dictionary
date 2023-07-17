@@ -1,12 +1,13 @@
 import React from "react";
+import { ListGroup } from "react-bootstrap";
 
 export default function Example(props) {
 	if (props.example) {
 		return (
-			<div>
+			<ListGroup.Item>
 				<strong>Example: </strong>
 				{props.example}
-			</div>
+			</ListGroup.Item>
 		);
 	}
 }

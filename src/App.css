@@ -1,0 +1,25 @@
+.navbar {
+	background: hsla(0, 0%, 100%, 0);
+	backdrop-filter: blur(30px);
+	box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.29);
+}
+
+html,
+body,
+body > div,
+.app {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background: #f3904f; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#3b4371,
+		#f3904f
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#3b4371,
+		#f3904f
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
