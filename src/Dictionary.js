@@ -12,6 +12,7 @@ export default function Dictionary() {
 	function handleResponse(response) {
 		console.log("Response = ", response);
 		setResults(response.data[0]);
+		console.log("Results = ", response.data[0]);
 	}
 
 	// Error handling
@@ -40,7 +41,6 @@ export default function Dictionary() {
 						<InputGroup className="mb-3">
 							<Form.Control
 								type="search"
-								variant
 								placeholder="Type a word to look up"
 								aria-label="Dictionary search bar"
 								autoFocus={true}

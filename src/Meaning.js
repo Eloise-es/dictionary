@@ -7,23 +7,19 @@ import { ListGroup, Row } from "react-bootstrap";
 
 export default function Meaning(props) {
 	return (
-		<Row>
-			{props.meaning.definitions.map(function (definition, index) {
-				return (
-					<Col xs={12} sm={6} md={4} lg={3} className="mb-3">
-						<Card key={props.index} className="h-100">
-							<Card.Body key={index}>
-								<Card.Title>{definition.definition}</Card.Title>
-							</Card.Body>
-							{props.word} ({props.meaning.partOfSpeech})
-							<ListGroup variant="flush">
-								<Example example={definition.example} />
-								<Synonyms synonyms={definition.synonyms} />
-							</ListGroup>
-						</Card>
-					</Col>
-				);
-			})}
-		</Row>
+		<Col xs={12} sm={6} md={4} lg={3} className="mb-3">
+			<Card key={props.index} className="h-100">
+				<Card.Body>
+					<Card.Title>
+						{props.meaning.partOfSpeech.toUpperCase()}:{" "}
+						{props.meaning.definition}
+					</Card.Title>
+				</Card.Body>
+				<ListGroup variant="flush">
+					<Example example={props.meaning.example} />
+					<Synonyms synonyms={props.meaning.synonyms} />
+				</ListGroup>
+			</Card>
+		</Col>
 	);
 }

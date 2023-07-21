@@ -5,9 +5,22 @@ import { Card, Row, Container } from "react-bootstrap";
 
 export default function Result(props) {
 	if (props.results) {
-		props.results.meanings.map(function (meaning, index) {
-			console.log(meaning);
+		const data = props.results.meanings;
+		data.refactored = [];
+		data.map((el) => {
+			// 2. set data array
+			// 3. populate with required objects in correct structure
+			el.definitions.forEach((o) => {
+				data.refactored.push({
+					partOfSpeech: el.partOfSpeech,
+					definition: o.definition,
+					example: o.example,
+					synonyms: o.synonyms,
+				});
+			});
 		});
+
+		console.log("Result = ", data);
 		const word = props.results.word;
 		return (
 			<Container className="Results">
@@ -18,7 +31,7 @@ export default function Result(props) {
 					</Card.Body>
 				</Card>
 				<Row className="justify-content-center">
-					{props.results.meanings.map(function (meaning, index) {
+					{data.refactored.map(function (meaning, index) {
 						return <Meaning meaning={meaning} index={index} word={word} />;
 					})}
 				</Row>
@@ -28,3 +41,11 @@ export default function Result(props) {
 		return null;
 	}
 }
+
+// Object.assign(resultsData, { meanings: props.results.meanings })
+// const result = props.results.meanings.map(({ meaning, ...o }) => {
+// 	o,
+// 		data.meanings.map(({ definitions, ...r }) => {
+// 			partOfSpeech: data.partOfSpeech;
+// 		});
+// });
