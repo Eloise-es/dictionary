@@ -4,6 +4,7 @@ import Phonetics from "./Phonetics";
 import { Card, Row, Container } from "react-bootstrap";
 
 export default function Result(props) {
+	// Create refactored array
 	if (props.results) {
 		const data = props.results.meanings;
 		data.refactored = [];
@@ -21,6 +22,7 @@ export default function Result(props) {
 		});
 
 		console.log("Result = ", data);
+
 		const word = props.results.word;
 		return (
 			<Container className="Results">
@@ -30,7 +32,7 @@ export default function Result(props) {
 						<Phonetics phonetics={props.results.phonetics} />
 					</Card.Body>
 				</Card>
-				<Row className="justify-content-center">
+				<Row className="justify-content-start">
 					{data.refactored.map(function (meaning, index) {
 						return <Meaning meaning={meaning} index={index} word={word} />;
 					})}
