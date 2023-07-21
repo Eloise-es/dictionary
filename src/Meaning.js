@@ -7,7 +7,7 @@ import { ListGroup, Row } from "react-bootstrap";
 
 export default function Meaning(props) {
 	return (
-		<Col xs={12} sm={6} md={4} lg={3} className="mb-3">
+		<Col xs={12} sm={6} md={4} lg={4} xl={3} className="mb-3">
 			<Card key={props.index} className="h-100">
 				<Card.Body>
 					<Card.Title>
