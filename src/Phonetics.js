@@ -14,7 +14,7 @@ export default function Phonetics(props) {
 							&nbsp;&nbsp;
 						</span>
 					);
-				} else return <span>{phonetics.text} </span>;
+				} else return <span key={index}>{phonetics.text} </span>;
 			})}
 		</div>
 	);
