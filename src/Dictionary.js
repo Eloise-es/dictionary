@@ -32,6 +32,8 @@ export default function Dictionary() {
 		setKeyword(event.target.value);
 	}
 
+	let altResults = {};
+
 	// render the search bar
 	return (
 		<Container className="Dictionary mt-5">

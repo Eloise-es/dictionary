@@ -1,12 +1,12 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 
-export default function Example(props) {
-	if (props.example) {
+export default function Definition(props) {
+	if (props.definition) {
 		return (
 			<ListGroup.Item key={props.index}>
-				<strong>Example: </strong>
-				{props.example}
+				<strong>Definition: </strong>
+				{props.definition}
 			</ListGroup.Item>
 		);
 	}
